@@ -35,6 +35,40 @@ namespace Stacks_Queque_Program
             Console.WriteLine("{0} pushed  to Stack : ", value);
         }
 
+        //Display Data of Top
+        internal void Peek()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is Empty !");
+                return;
+            }
+            Console.WriteLine("{0} is in the top of the Stack : ", this.top.data);
+        }
+
+        //Delete data from Top of the Stack
+        internal void Pop()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is Empty, Deletion is not Possible !");
+                return;
+            }
+            Console.WriteLine("Popped value : {0}", this.top.data);
+            Console.WriteLine("----------------------------");
+            this.top = this.top.next;
+        }
+
+        //Deletion till Stack will be Empty
+        internal void IsEmpty()
+        {
+            while (this.top != null)
+            {
+                Peek();
+                Pop();
+            }
+        }
+
         //Display Stack
         internal void Display()
         {
