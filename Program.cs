@@ -25,15 +25,23 @@ namespace Stacks_Queque_Program
             linkedListStack.IsEmpty();
             */
 
-            //Calling Class and Adding Data in Stack
+            //Calling Class and Adding Data in Queue
             LinkedListQueue linkedListQueue = new LinkedListQueue();
             linkedListQueue.Enqueue(56);
             linkedListQueue.Enqueue(30);
             linkedListQueue.Enqueue(70);
             Console.WriteLine("----------------");
-
             //Display Queue
             linkedListQueue.Display();
+
+            //Dequeue from queue
+            linkedListQueue.Dequeue();
+            //Empty Dequeue
+            linkedListQueue.IsEmpty();
+            //Display Queue
+            linkedListQueue.Display();
+            Console.WriteLine("----------------");
+
             Console.ReadLine();
         }
     }
